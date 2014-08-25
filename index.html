@@ -31,11 +31,10 @@
   </section>
   
     <section>
-    <div class="Component Viewpicker" id="viewpicker"></div>
     <div class="Component Realtime" id="realtime">
       <h1 class="Realtime-content">
         Active Users:
-        <span class="Realtime-value" id="active-users"></span>
+        <span class="Realtime-value" id="active-users2"></span>
       </h1>
     </div>
   </section>
@@ -94,6 +93,7 @@ we don't need to do it again here. -->
 
 <!-- This demo uses the active-users component -->
 <script src="components/active-users.js"></script>
+<script src="components/active-users.js"></script>
 
 <script>
 gapi.analytics.ready(function() {
@@ -131,6 +131,11 @@ gapi.analytics.ready(function() {
    */
   var activeUsers = new gapi.analytics.ext.ActiveUsers({
     container: 'active-users',
+    pollingInterval: 5
+  });
+
+  var activeUsers2 = new gapi.analytics.ext.ActiveUsers({
+    container: 'active-users2',
     pollingInterval: 5
   });
 
