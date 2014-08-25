@@ -166,6 +166,7 @@ gapi.analytics.ready(function() {
    */
   viewpicker.on('change', function(data) {
     activeUsers.set(data).execute();
+    activeUsers2.set(data).execute();
     drawWeek(data.ids);
     drawYear(data.ids);
     drawBrowserStats(data.ids);
