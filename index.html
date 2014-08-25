@@ -150,6 +150,12 @@ gapi.analytics.ready(function() {
   activeUsers.on('change', function(data) {
     realtime.classList.add(data.direction);
   });
+  activeUsers2.on('stop', removeAnimationClasses)
+  activeUsers2.on('change', function(data) {
+    realtime.classList.add(data.direction);
+  });
+
+
   function removeAnimationClasses() {
     realtime.classList.remove('increase');
     realtime.classList.remove('decrease');
